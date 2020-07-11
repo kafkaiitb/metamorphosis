@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Kafka</title>
+  <meta name="generator" content="Google Web Designer 8.0.3.0603">
+  <style type="text/css" id="gwd-text-style">
+    p {
+      margin: 0px;
+    }
+    h1 {
+      margin: 0px;
+    }
+    h2 {
+      margin: 0px;
+    }
+    h3 {
+      margin: 0px;
+    }
+  </style>
+  <style type="text/css">
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+    }
+    /* body {
+      background-color: transparent;
+      transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+      transform-style: preserve-3d;
+    } */
+    .gwd-img-1khl {
+      position: absolute;
+      height: 200vh;
+      left: 0px;
+      top: 0px;
+      width: auto;
+    }
+    .gwd-p-1398 {
+      position: sticky;
+      width: 400 px;
+      color: rgb(211, 211, 211);
+      font-family: Mukta;
+      background-image: none;
+      background-color: transparent;
+      font-weight: 300;
+      font-size: 26.92px;
+      line-height: .75;
+      left: 487px;
+      top: px;
+      height: 200vhpx;
+      transform-origin: 144px 17.7053px 0px;
+    }
+    .gwd-span-1i1w {
+      font-size: 0px;
+    }
+    .gwd-span-3dq4 {
+      font-size: 14.94px;
+    }
+    .gwd-div-6iwv {
+      font-size: 14.94px;
+    }
+    .gwd-span-takt {
+      font-size: 14.94px;
+    }
+    .gwd-span-sr8i {
+      font-size: xx-large;
+    }
+    .gwd-div-ssv9 {
+      font-size: 14.94px;
+    }
+    .gwd-span-sbqe {
+      font-size: 14.94px;
+    }
+    .gwd-div-2zdi {
+      font-size: 14.94px;
+      left: 0px;
+      top: 26px;
+    }
+    .gwd-span-1ycf {
+      font-size: 14.94px;
+    }
+    .gwd-div-727w {
+      font-size: 14.94px;
+    }
+    .gwd-span-1el3 {
+      font-weight: 500;
+    }
+    .gwd-span-6req {
+      font-size: 14.94px;
+    }
+    .gwd-span-qdd1 {
+      font-size: 14.94px;
+      font-weight: bold;
+      line-height: normal;
+    }
+    .gwd-span-jgzt {
+      font-size: 14.94px;
+    }
+    .gwd-span-sibx {
+      font-size: 14.94px;
+    }
+    .gwd-span-2672 {
+      font-weight: bold;
+    }
+    .gwd-span-m666 {
+      font-weight: bold;
+      font-size: 26.92px;
+      line-height: 2;
+
+        }
+    .gwd-span-a2sh {
+      font-weight: bold;
+    }
+    .gwd-p-4asm {
+      position: static;
+      font-family: Mukta;
+      font-size: 14.94px;
+      font-weight: bold;
+      color: rgb(211, 211, 211);
+      left: 487px;
+      top: 312px;
+    }
+    .gwd-img-u5yf {
+      position: static;
+      width: 41px;
+      height: 41px;
+      left: 480px;
+      top: 337px;
+    }
+    .gwd-img-jcz9 {
+      position: static;
+      width: 41px;
+      height: 41px;
+      transform-origin: -70.28px 56.32px 0px;
+      left: 519px;
+      top: 337px;
+    }
+    .gwd-img-2z7f {
+      position: static;
+      width: 41px;
+      height: 41px;
+      left: 599px;
+      top: 338px;
+    }
+    .gwd-img-3zh9 {
+      position: static;
+      width: 41px;
+      height: 41px;
+      left: 558px;
+      top: 338px;
+    }
+    .gwd-img-12ff {
+      position: static;
+      width: 41px;
+      height: 41px;
+      transform-origin: 30.72px 30.72px 0px;
+      left: 641px;
+      top: 338px;
+    }
+    .gwd-div-1b5p {
+      position: static;
+      /* left: 486px; */
+      /*  top: 181px; */
+      width: 282px;
+      height: 1000;
+      /* transform-origin: 140.8px 59.2px 0px; */
+    }
+    .gwd-img-z44w {
+      position: absolute;
+      width: auto;
+      height: 100vh;
+      left: 0px;
+      top: 0px;
+    }
+
+    .container{
+      display: flex;
+      width: auto;
+      height: 100%;
+      background-image: url("assets/backy-02.png");
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-size: cover;
+      background-position: center;
+      @media only screen and (max-width: 600px) {
+        background-image: url("assets/backy-13.png");
+          width: 100%;
+        }
+    }
+
+
+
+    .emptybox{
+      width: 50%;
+      height: 100%;
+    }
+    .player{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      height: 100%;
+    }
+    .bg {
+      /* The image used */
+      background-image: url("assets/background-02.png");
+
+      /* Full height */
+      height: 100%;
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Create three equal columns that floats next to each other */
+    .columns {
+      float: left;
+      width: 33.33%;
+      padding: 10px;
+      font-family: Mukta;
+      font-size: 14.94px;
+      line-height: 1.25;
+      text-align: justify
+
+    }
+    .gwd-p-1398s {
+      position: inherit;
+      width: 400 px;
+      color: rgb(211, 211, 211);
+      font-family: Mukta;
+      background-image: none;
+      background-color: transparent;
+      font-weight: 300;
+      font-size: 61.40px;
+      line-height: .75;
+      left: 100px;
+      top: 124px;
+      height: 200vhpx;
+      transform-origin: 144px 17.7053px 0px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+
+    /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .columns {
+        width: 100%;
+      }
+
+    }
+    div.gallery {
+      margin: 5px;
+      border: 1px solid #ccc;
+      float: left;
+      width: 180px;
+      font-family: Mukta;
+      color: rgb(211, 211, 211);
+
+    }
+    .collapsible {
+      background-color: #777;
+      color: white;
+      cursor: pointer;
+      padding: 0px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .active, .collapsible:hover {
+      background-color: #555;
+    }
+
+    .content {
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color: #f1f1f1;
+    }
+
+    .gwd-p-1398t {
+      position: inherit;
+      width: 400 px;
+      color: rgb(211, 211, 211);
+      font-family: Mukta;
+      background-image: none;
+      background-color: transparent;
+      font-weight: 300;
+      font-size: 61.40px;
+      line-height: .75;
+      left: 100px;
+      top: 124px;
+      height: 200vhpx;
+      transform-origin: 144px 17.7053px 0px;
+    }
+
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+
+    div.desc {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .video-responsive{
+        overflow:hidden;
+        padding-bottom:56.25%;
+        position:relative;
+        height:0;
+    }
+    .video-responsive iframe{
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+    }
+    .gwd-p-1398bs {
+      position: inherit;
+      width: 400 px;
+      color: rgb(211, 211, 211);
+      font-family: Mukta;
+      background-image: none;
+      background-color: transparent;
+      font-weight: 300;
+      font-size: 61.40px;
+      line-height: .75;
+      left: 100px;
+      top: 124px;
+      height: 200vhpx;
+      transform-origin: 144px 17.7053px 0px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+
+    /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+      }
+    }
+    .container1{
+        display: flex;
+        width: auto;
+        height: 100%;
+        background-image: url("assets/1 (1).png");
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center;
+      }
+    /* @media (max-width: 818px) {}
+    @media (min-width: 819px) {} */
+  </style>
+  <link href="https://fonts.googleapis.com/css?family=Mukta:200,300,regular,500,600,700,800" rel="stylesheet" type="text/css">
+</head>
+
+<!-- <body class="htmlNoPages"> -->
+<body>
+
+
+  <div class="container">
+    <!-- <img src="assets/background-03.png" id="background-03" class="gwd-img-1khl"> -->
+    <!-- <img src="assets/backy-03.png" id="backy-03" class="gwd-img-z44w"> -->
+    <div class="emptybox"></div>
+    <div class="player">
+      <div class="player-container">
+        <p class="gwd-p-1398">
+          <span class="gwd-span-a2sh">Kafka@IITB</span>
+          <span class="gwd-span-qdd1"></br>Theatre Company</span>
+          <span class="gwd-span-jgzt">present:<br>  </span>
+          <span class="gwd-span-a2sh">'The Metamorphosis'</span>,
+          <span class="gwd-span-qdd1"></br>an audio play in 3 acts</span>
+        </p>
+        <!-- <div class="gwd-div-727w"><span class="gwd-span-sibx"><span class="gwd-span-2672">‘The Metamorphosis’</span>, an audio play</span> in 3 acts.</div> -->
+        <div class="gwd-div-1b5p">
+        <iframe width="100%" height="250" width="500" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1086942178&color=%23dcdcdc&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+        </div>
+        <p class="gwd-p-4asm">Listen now on:</p>
+        <a href="https://open.spotify.com/album/5KvqE6qJNy0TmaZKwk5MC8?si=eJirRnPSQQeaZgBOTEX9gQ">
+          <img src="assets/icons-04.png" id="icons-04" class="gwd-img-u5yf">
+        </a>
+        <a href="https://music.apple.com/in/album/kafka-iitb-the-metamorphosis/1519571147">
+          <img src="assets/icons-05.png" id="icons-05" class="gwd-img-jcz9">
+        </a>
+        <a href="https://music.youtube.com/playlist?list=OLAK5uy_mhwGEdh_yczz-fjeSvQRBPHA1hCfO16V0">
+          <img src="assets/icons-06.png" id="icons-06" class="gwd-img-3zh9">
+        </a>
+        <a href="https://music.amazon.com/albums/B08C738WDH?tab=CATALOG">
+          <img src="assets/icons-07.png" id="icons-07" class="gwd-img-2z7f"> </a>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</body>
+
+<body style="background-color:black;">
+
+
+<div class="gwd-p-1398s" style="color:#dcdcdc;">
+<p><br>
+  <br>Our Story</p>
+</div>
+
+<div class="row">
+  <div class="columns" style="color:#dcdcdc;">
+
+    <p>For most of us, it all started with an unassuming mail calling for “performers, writers, actors, and theatre enthusiasts” for a stage adaptation of ‘The Metamorphosis’ by Franz Kafka. And from the first meet we had on the 1st of September, 2019, grew the Kafka@IITB Theatre Company as we set out with the intent to engage with the novella on a literal, psychological, and artistic level. Spearheaded by Palina Lissitsyna, supported by the IR-Office of IIT Bombay, and funded by the cultural department of the German General Consulate Mumbai, our group first set about establishing a vision for our adaptation. Regular reading meets were held during which we came up with varying interpretations of the novella, discussed Gregor’s relationships with the world and his family, studied other adaptations, and created the core idea of what our play was going to be. Parallelly, teams were formed to work on music, acting, writing, and other production aspects so we could bounce ideas off each other about characterisation, colour palette, voice, music, light, and sound during the ideation. Once this stage drew to a close, next came the actual work of creating the script. The writing team was soon hard at work at enjoying high teas at Gulmohar’s café and putting into words all the lofty ideas our initial meets produced. At the end of the autumn semester came the auditions for the main cast, and the new year began with a readied script and a ready cast.
+</p>
+  </div>
+  <div class="columns" style=" color:#dcdcdc;">
+
+    <p>Rehearsals kicked off in January 2020 and we spent the next three months working on the directing and acting aspects of the play- a long and immensely fun process that involved a great deal of repeated reminders to learn our lines, discovering ever-newer places in the campus to practice, and finding that the longer you inhabit a character, the more you begin to understand them. Around the same time, the music production kicked into high gear as the background score began to take shape. Eerie voices certainly heightened the experience of rediscovering Gregor’s metamorphosed form twice a week!
+<BR><BR>And then March marched along, and everything ground to a halt with the pandemic in full swing across the globe. Just about two weeks shy of our debut and following our first full dress rehearsal in an empty auditorium, we finally decided the safest course of action was to cancel all stage shows. We soon left Mumbai feeling appropriately dramatically despondent.
+</p>
+  </div>
+  <div class="columns" style="color:#dcdcdc;">
+    <p>But it only took us one nostalgic Zoom meeting to collectively agree that we’d take these new developments in stride and rework our play for an audio medium. What followed were changes to the script, multiple recording sessions, mixing and mastering the audio, and many, many frozen screens, awkward pauses, and crackling voices over Zoom.
+<BR><BR>And so, after it being in the works for over 10 months in various forms, Kafka@IITB is proud to present: ‘The Metamorphosis’.
+<BR>
+  <BR>
+Read the script on:<BR> </p></div>
+<a href="https://www.musixmatch.com/album/Tanvi-Prakash/Kafka-iitb-The-Metamorphosis">
+        <img src="assets/icons-01.png" id="icons-09" class="gwd-img-u5yf"></a>
+        <BR>
+<div class="columns" style="color:#dcdcdc;">
+      <p>  Thanking our partners:<BR></div>
+        <a href="https://www.daad.de/en/">
+                <img src="assets/logooos-01.png" id="icons-09" class="gwd-img-u5yf"></a>
+                <a href="https://india.diplo.de/in-en/vertretungen/gkmumbai">
+                        <img src="assets/logoos-04.png" id="icons-09" class="gwd-img-u5yf"></a>
+
+
+
+  </div>
+
+
+</body>
+<body style="background-color:black;">
+  <div class="gwd-p-1398t" style="color:#dcdcdc;">
+  <p>  <br>
+    <br>The Team</p>
+  </div>
+<div class="gallery">
+      <img src="assets/photolog-12.png" alt="Cinque Terre" width="600" height="400">
+    <div class="desc">
+       Palina Lissitsyna
+    <div class="content">
+      <p>asdasdait, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    </div>
+  </div>
+
+  <div class="gallery">
+
+      <img src="assets/anurag-11.png" alt="Forest" width="600" height="400">
+
+    <div class="desc">Anurag Soni</div>
+  </div>
+
+<div class="gallery">
+
+    <img src="assets/photos-10.png" alt="Forest" width="600" height="400">
+
+  <div class="desc">Tanvi Prakash</div>
+</div>
+
+<div class="gallery">
+
+  <img src="assets/photo-09.png"  width="600" height="400">
+
+        <div class="desc">Abhishek Yadav</div>
+    </div>
+<div class="gallery">
+
+              <img src="assets/Khoder-10.png" width="600" height="400">
+
+            <div class="desc">Khoder Alshaar</div>
+        </div>
+<div class="gallery">
+
+
+      <img src="assets/sesan-11.png"  width="600" height="400">
+
+    <div class="desc">Sesan Nayak</div>
+  </div>
+
+  <div class="gallery">
+
+        <img src="assets/ashita-10.png"  width="600" height="400">
+        <div class="desc">Ashita Yedita</div>
+    </div>
+
+<div class="gallery">
+
+        <img src="assets/photolog-10.png"  width="600" height="400">
+
+      <div class="desc">Richie Garg</div>
+  </div>
+<div class="gallery">
+
+            <img src="assets/photo-10.png"  width="600" height="400">
+
+          <div class="desc">Tanisha Joshi</div>
+      </div>
+<div class="gallery">
+
+        <img src="assets/photolog-09.png" width="600" height="400">
+
+        <div class="desc">Yashwini Gawande</div>
+    </div>
+
+
+
+<div class="gallery">
+
+    <img src="assets/photos-12.png"  width="600" height="400">
+
+  <div class="desc">Kaustubh Bagde </div>
+</div>
+
+<div class="gallery">
+
+<img src="assets/photos-09.png" width="600" height="400">
+  <div class="desc">Aditya Raj </div>
+</div>
+</div>
+</body>
+
+<body style="background-color:black;">
+
+
+<div class="gwd-p-1398bs" style="color:#dcdcdc;"><p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Behind The Scenes!</p>
+</div>
+<div class="video-responsive">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLpR9NIy08CsBtMPa2H5zxG6tXhKPsGATQ" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<div class="gwd-p-1398bs" style="color:#dcdcdc;">
+<p><br><br>On Stage!</p>
+
+<div class="video-responsive">
+<<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLpR9NIy08CsDPBry16jjRmeX0bMRhckcu" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+</body>
+
+<body>
+  <div class="gwd-p-1398bs" style="color:#dcdcdc;">
+  <p><br>The Samsa Family!</p></div>
+  <div class="container1">
+     </div>
+
+  </body>
+
+</html>
